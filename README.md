@@ -8,6 +8,7 @@
 
 ```bash
 npm install typed-emitter-<version>.tgz
+# or
 pnpm add typed-emitter-<version>.tgz
 ```
 
@@ -19,15 +20,15 @@ pnpm add typed-emitter-<version>.tgz
 import { TypedEmitter } from "typed-emitter";
 
 const emitter = new TypedEmitter<{
-    message: [string];
-    userConnected: [number, string];
+    message: [message: string];
+    userConnected: [userId: number, username: string];
 }>();
 
 emitter.on("message", (message) => {
     console.log(`Received message: ${message}`);
 });
 
-emitter.emit("message", "Alice");
+emitter.emit("message", "Hello, World!");
 
 emitter.on("userConnected", (userId, username) => {
     console.log(`User connected: ${username} (ID: ${userId})`);

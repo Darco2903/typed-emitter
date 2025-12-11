@@ -2,9 +2,10 @@
 .github/
 .gitattributes
 src/
-tests/
 tsconfig*.json
-vitest.config*.ts
+tests/
+vitest.config.ts
+.github/
 
 # tarballs
 typed-emitter-*.tgz
