@@ -1,7 +1,11 @@
 import EventEmitter from "events";
 
-export class TypedEmitter<TEvents extends Record<string, any>> extends EventEmitter {
-    private emitter = new EventEmitter();
+export class TypedEmitter<TEvents extends Record<string, any>> implements EventEmitter {
+    private emitter: EventEmitter;
+
+    constructor() {
+        this.emitter = new EventEmitter();
+    }
 
     addListener<TEventName extends keyof TEvents & string>(
         eventName: TEventName,
