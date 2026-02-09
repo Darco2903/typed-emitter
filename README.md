@@ -6,15 +6,9 @@
 
 ## Installation
 
-```bash
-npm install typed-emitter-<version>.tgz
-# or
-pnpm add typed-emitter-<version>.tgz
-```
+You can found the package here: [**@darco2903/typed-emitter**](https://github.com/users/Darco2903/packages/npm/package/typed-emitter)
 
 ## Example Usage
-
-### Basic Example
 
 ```ts
 import { TypedEmitter } from "typed-emitter";
