@@ -11,7 +11,7 @@ You can found the package here: [**@darco2903/typed-emitter**](https://github.co
 ## Example Usage
 
 ```ts
-import { TypedEmitter } from "typed-emitter";
+import { TypedEmitter } from "@darco2903/typed-emitter";
 
 const emitter = new TypedEmitter<{
     message: [message: string];
