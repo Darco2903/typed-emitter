@@ -6,7 +6,7 @@
 
 ## Installation
 
-You can found the package here: [**@darco2903/typed-emitter**](https://github.com/users/Darco2903/packages/npm/package/typed-emitter)
+You can find the package here: [**@darco2903/typed-emitter**](https://github.com/users/Darco2903/packages/npm/package/typed-emitter)
 
 ## Example Usage
 
