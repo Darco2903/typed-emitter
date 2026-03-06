@@ -23,7 +23,7 @@ export class TypedEmitterProtected<TEvents extends Record<string, any>> extends 
 
     /**
      * This method protects against external calls to setMaxListeners. It does nothing.
-     * @deprecated This method does nothing.
+     * @deprecated Use protected _setMaxListeners instead.
      * @returns
      */
     public setMaxListeners(n: number): this {
