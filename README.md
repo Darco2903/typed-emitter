@@ -29,11 +29,11 @@ The `TypedEmitterProtected` class is a base class that provides protected access
 ```ts
 import { TypedEmitterProtected } from "@darco2903/typed-emitter";
 
-export interface MyEvents {
+interface MyEvents {
     event: [{ id: number; name: string }];
 }
 
-export class MyEmitter extends TypedEmitterProtected<MyEvents> {
+class MyEmitter extends TypedEmitterProtected<MyEvents> {
     constructor() {
         super();
     }
@@ -107,7 +107,7 @@ await emitter.waitFor("event3", { condition: ({ a, b }) => a > 0 && b === "Hello
 // will wait for event2 to be emitted, but will only resolve if the condition is met (v is true) and will resolve with an Err if it takes longer than 1000ms
 await emitter.waitFor("event2", { timeout: 1000, condition: (v) => v });
 
-// Full exemple with all options
+// Full example with both timeout and condition:
 
 await emitter
     .waitFor("event1", {
@@ -120,7 +120,7 @@ await emitter
             console.log("Event received:", id, name);
         },
         () => {
-            // timeout was reached before event was emitted or condition was met
+            // timeout was reached before event was emitted
             console.error("Failed to wait for event: timeout reached");
         },
     );
